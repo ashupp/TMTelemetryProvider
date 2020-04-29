@@ -21,9 +21,3 @@ As the directorys should match, each file should be put automatically in the rig
 - Put contents of folder "provider" into folder "SimFeedbackFolder/provider"  
 - Put contents of folder "img" to folder "SimFeedbackFolder/img"  
 - Put contents of folder "profiles" to folder "SimFeedbackFolder/profiles"  
-
-## Third party Libraries
-**This tool makes use of the following great projects:**
-
-scs-sdk-plugin  
-https://github.com/RenCloud/scs-sdk-plugin
