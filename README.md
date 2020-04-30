@@ -1,12 +1,11 @@
 # TMTelemetryProvider
-Trackmania Telemetry Provider for SimFeedback / SFX-100
+TrackMania Telemetry Provider for SimFeedback / SFX-100
 
 Please support this great project.  
 https://opensfx.com
 
 ## Prerelease on the release tab
 ## Warning  
-I am not recommending to use this plugin  at the current stage of development unless you are know exactly what you are doing.  
 **Unpredicted movement of you SFX-100 could happen at any time when this plugin is enabled.**  
 I am not responsible of any damages caused by usage of this plugin!  
 **You have been warned!**
