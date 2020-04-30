@@ -1,5 +1,5 @@
 # TMTelemetryProvider
-TrackMania Telemetry Provider for SimFeedback / SFX-100
+TrackMania / Maniaplanet Telemetry Provider for SimFeedback / SFX-100
 
 Please support this great project.  
 https://opensfx.com
