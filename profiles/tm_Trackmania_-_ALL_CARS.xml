@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Active="true" Name="Trackmania - All Cars" TelemetryProvider="tm" OverallIntensity="50">
   <Author>ashupp / ashnet GmbH</Author>
-  <Version>v0.0.1.0</Version>
+  <Version>v0.0.1.1</Version>
   <Info>Baseline profile for Trackmania Turbob</Info>
   <BannerImage>img\banner_tm.png</BannerImage>
   <ControllerConfigList>
-    <ControllerConfig Id="1" Type="SFX" SmoothingEnabled="true" Smoothness="10" Intensity="50" Acceleration="40" MinSpeed="80" MaxSpeed="90" />
+    <ControllerConfig Id="1" Type="SFX" SmoothingEnabled="true" Smoothness="20" Intensity="50" Acceleration="40" MinSpeed="80" MaxSpeed="90" />
   </ControllerConfigList>
   <FeedbackEffectList>
     <FeedbackEffect Type="SimFeedback.motion.HeaveMotionFeedbackEffect">
@@ -15,14 +15,14 @@
       <intervalValueY1>5</intervalValueY1>
       <minValueY1>-25</minValueY1>
       <maxValueY1>25</maxValueY1>
-      <intervalValueX>0.5</intervalValueX>
-      <minValueX>-2</minValueX>
-      <maxValueX>2</maxValueX>
+      <intervalValueX>1</intervalValueX>
+      <minValueX>-10</minValueX>
+      <maxValueX>10</maxValueX>
       <enabled>true</enabled>
       <mute>false</mute>
       <smoothing>0</smoothing>
       <controller-id>1</controller-id>
-      <intensity>1</intensity>
+      <intensity>2</intensity>
       <ConfigDataSet>
         <xs:schema id="DataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
           <xs:element name="DataSet" msdata:IsDataSet="true" msdata:Locale="de-DE">
@@ -59,38 +59,62 @@
         <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
           <DataSet>
             <Volume diffgr:id="Volume1" msdata:rowOrder="0">
-              <X>-2</X>
+              <X>-10</X>
               <Y>0</Y>
             </Volume>
             <Volume diffgr:id="Volume2" msdata:rowOrder="1">
-              <X>2</X>
+              <X>-1.988</X>
+              <Y>0</Y>
+            </Volume>
+            <Volume diffgr:id="Volume3" msdata:rowOrder="2">
+              <X>1.988</X>
+              <Y>0</Y>
+            </Volume>
+            <Volume diffgr:id="Volume4" msdata:rowOrder="3">
+              <X>10</X>
               <Y>0</Y>
             </Volume>
             <Frequency diffgr:id="Frequency1" msdata:rowOrder="0">
-              <X>-2</X>
+              <X>-10</X>
               <Y>-25</Y>
             </Frequency>
             <Frequency diffgr:id="Frequency2" msdata:rowOrder="1">
-              <X>2</X>
+              <X>-1.988</X>
+              <Y>-10.134594176711767</Y>
+            </Frequency>
+            <Frequency diffgr:id="Frequency3" msdata:rowOrder="2">
+              <X>1.988</X>
+              <Y>9.9839396536864982</Y>
+            </Frequency>
+            <Frequency diffgr:id="Frequency4" msdata:rowOrder="3">
+              <X>10</X>
               <Y>25</Y>
             </Frequency>
+            <Realtime diffgr:id="Realtime1" msdata:rowOrder="0">
+              <X>-10</X>
+              <Y>-25</Y>
+            </Realtime>
+            <Realtime diffgr:id="Realtime2" msdata:rowOrder="1">
+              <X>0.714931726455688</X>
+              <Y>-25</Y>
+            </Realtime>
           </DataSet>
         </diffgr:diffgram>
       </ConfigDataSet>
     </FeedbackEffect>
     <FeedbackEffect Type="SimFeedback.motion.PitchMotionFeedbackEffect">
-      <linearInterpolation>true</linearInterpolation>
+      <linearInterpolation>false</linearInterpolation>
       <name>Pitch</name>
       <telemetryName>Pitch</telemetryName>
       <intervalValueY1>5</intervalValueY1>
-      <minValueY1>-25</minValueY1>
-      <maxValueY1>25</maxValueY1>
+      <minValueY1>-45</minValueY1>
+      <maxValueY1>45</maxValueY1>
       <intervalValueX>2</intervalValueX>
       <minValueX>-20</minValueX>
       <maxValueX>20</maxValueX>
       <enabled>true</enabled>
       <mute>false</mute>
-      <smoothing>0</smoothing>
+      <smoothing>5</smoothing>
       <controller-id>1</controller-id>
       <intensity>1</intensity>
       <ConfigDataSet>
@@ -138,11 +162,11 @@
             </Volume>
             <Frequency diffgr:id="Frequency1" msdata:rowOrder="0">
               <X>-20</X>
-              <Y>25</Y>
+              <Y>45</Y>
             </Frequency>
             <Frequency diffgr:id="Frequency2" msdata:rowOrder="1">
               <X>20</X>
-              <Y>-25</Y>
+              <Y>-45</Y>
             </Frequency>
           </DataSet>
         </diffgr:diffgram>
@@ -199,21 +223,29 @@
         <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
           <DataSet>
             <Volume diffgr:id="Volume1" msdata:rowOrder="0">
-              <X>-2</X>
+              <X>-0.756</X>
               <Y>0</Y>
             </Volume>
             <Volume diffgr:id="Volume2" msdata:rowOrder="1">
-              <X>2</X>
+              <X>0.756</X>
               <Y>0</Y>
             </Volume>
             <Frequency diffgr:id="Frequency1" msdata:rowOrder="0">
-              <X>-2</X>
-              <Y>20.540105957047231</Y>
+              <X>-0.756</X>
+              <Y>-14.895376302894446</Y>
             </Frequency>
             <Frequency diffgr:id="Frequency2" msdata:rowOrder="1">
-              <X>2</X>
-              <Y>-19.957588054314684</Y>
+              <X>0.756</X>
+              <Y>14.678597613297484</Y>
             </Frequency>
+            <Realtime diffgr:id="Realtime1" msdata:rowOrder="0">
+              <X>-2</X>
+              <Y>-25</Y>
+            </Realtime>
+            <Realtime diffgr:id="Realtime2" msdata:rowOrder="1">
+              <X>0</X>
+              <Y>-25</Y>
+            </Realtime>
           </DataSet>
         </diffgr:diffgram>
       </ConfigDataSet>
@@ -225,12 +257,12 @@
       <intervalValueY1>25</intervalValueY1>
       <minValueY1>-25</minValueY1>
       <maxValueY1>25</maxValueY1>
-      <intervalValueX>0.5</intervalValueX>
-      <minValueX>-5</minValueX>
-      <maxValueX>5</maxValueX>
+      <intervalValueX>5</intervalValueX>
+      <minValueX>-45</minValueX>
+      <maxValueX>45</maxValueX>
       <enabled>true</enabled>
       <mute>false</mute>
-      <smoothing>0</smoothing>
+      <smoothing>5</smoothing>
       <controller-id>1</controller-id>
       <intensity>1</intensity>
       <ConfigDataSet>
@@ -269,21 +301,69 @@
         <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
           <DataSet>
             <Volume diffgr:id="Volume1" msdata:rowOrder="0">
-              <X>-5</X>
+              <X>-34.731</X>
               <Y>0</Y>
             </Volume>
             <Volume diffgr:id="Volume2" msdata:rowOrder="1">
-              <X>5</X>
+              <X>-19.646</X>
+              <Y>0</Y>
+            </Volume>
+            <Volume diffgr:id="Volume3" msdata:rowOrder="2">
+              <X>-5.087</X>
+              <Y>0</Y>
+            </Volume>
+            <Volume diffgr:id="Volume4" msdata:rowOrder="3">
+              <X>-0.019</X>
+              <Y>0</Y>
+            </Volume>
+            <Volume diffgr:id="Volume5" msdata:rowOrder="4">
+              <X>5.438</X>
+              <Y>0</Y>
+            </Volume>
+            <Volume diffgr:id="Volume6" msdata:rowOrder="5">
+              <X>19.997</X>
+              <Y>0</Y>
+            </Volume>
+            <Volume diffgr:id="Volume7" msdata:rowOrder="6">
+              <X>35.258</X>
               <Y>0</Y>
             </Volume>
             <Frequency diffgr:id="Frequency1" msdata:rowOrder="0">
-              <X>-5</X>
+              <X>-34.731</X>
               <Y>-25</Y>
             </Frequency>
             <Frequency diffgr:id="Frequency2" msdata:rowOrder="1">
-              <X>5</X>
+              <X>-19.646</X>
+              <Y>-16.021732394494716</Y>
+            </Frequency>
+            <Frequency diffgr:id="Frequency3" msdata:rowOrder="2">
+              <X>-5.087</X>
+              <Y>-8.5274944645066491</Y>
+            </Frequency>
+            <Frequency diffgr:id="Frequency4" msdata:rowOrder="3">
+              <X>-0.019</X>
+              <Y>0.48352090044286911</Y>
+            </Frequency>
+            <Frequency diffgr:id="Frequency5" msdata:rowOrder="4">
+              <X>5.438</X>
+              <Y>8.5283573761558458</Y>
+            </Frequency>
+            <Frequency diffgr:id="Frequency6" msdata:rowOrder="5">
+              <X>19.997</X>
+              <Y>16.022595306143906</Y>
+            </Frequency>
+            <Frequency diffgr:id="Frequency7" msdata:rowOrder="6">
+              <X>35.258</X>
               <Y>25</Y>
             </Frequency>
+            <Realtime diffgr:id="Realtime1" msdata:rowOrder="0">
+              <X>-45</X>
+              <Y>-25</Y>
+            </Realtime>
+            <Realtime diffgr:id="Realtime2" msdata:rowOrder="1">
+              <X>2.02671989798377</X>
+              <Y>-25</Y>
+            </Realtime>
           </DataSet>
         </diffgr:diffgram>
       </ConfigDataSet>
@@ -433,6 +513,14 @@
               <X>14131.909</X>
               <Y>49.543661438973466</Y>
             </Frequency>
+            <Realtime diffgr:id="Realtime1" msdata:rowOrder="0">
+              <X>0</X>
+              <Y>0</Y>
+            </Realtime>
+            <Realtime diffgr:id="Realtime2" msdata:rowOrder="1">
+              <X>2650.1162109375</X>
+              <Y>0</Y>
+            </Realtime>
           </DataSet>
         </diffgr:diffgram>
       </ConfigDataSet>
