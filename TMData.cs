@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using Math = System.Math;
 
 namespace SimFeedback.telemetry
 {
@@ -134,9 +135,53 @@ namespace SimFeedback.telemetry
 
         public double Heave => Device.CenteredAltitude;
 
-        public double Pitch => (Device.Euler.y) * (180 / Math.PI);
+        public static double ConvertRange(
+            int originalStart, int originalEnd, // original range
+            int newStart, int newEnd, // desired range
+            double value) // value to convert
+        {
+            double scale = (double)(newEnd - newStart) / (originalEnd - originalStart);
+            return (double)(newStart + ((value - originalStart) * scale));
+        }
 
-        public double Roll => (Device.Euler.z) * (180 / Math.PI);
+
+        //Reverses angles greater than minMag to a range between minMag and 0
+        private float LoopAngle(float angle, float minMag)
+        {
+
+            float absAngle = Math.Abs(angle);
+
+            if (absAngle <= minMag)
+            {
+                return angle;
+            }
+
+            float direction = angle / absAngle;
+
+            //(180.0f * 1) - 135 = 45
+            //(180.0f *-1) - -135 = -45
+            float loopedAngle = (180.0f * direction) - angle;
+
+            return loopedAngle;
+        }
+
+        private float recalculateAngles(float eulerValue)
+        {
+            var tmpData = (eulerValue * (180.0 / Math.PI) / 360.0 - Math.Truncate(eulerValue * (180.0 / Math.PI) / 360.0)) * 360;
+            if (tmpData > 180)
+            {
+                var eulYNeg = eulerValue * -1;
+                tmpData = ((eulYNeg * (180.0 / Math.PI) / 360.0 - Math.Truncate(eulYNeg * (180.0 / Math.PI) / 360.0)) * 360) + 360;
+                tmpData = tmpData * -1;
+            }
+
+            return (float) tmpData;
+        }
+
+        public double Pitch => LoopAngle(recalculateAngles(Device.Euler.y),90);
+
+        public double Roll => LoopAngle(recalculateAngles(Device.Euler.z), 90);
+        
 
         public double Yaw => Device.CenteredYaw;
 
